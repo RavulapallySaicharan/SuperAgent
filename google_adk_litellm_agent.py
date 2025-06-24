@@ -29,7 +29,7 @@ async def main():
     
     session_service = InMemorySessionService()
     session_id = "session-123"
-    session_service.create_session(app_name="litellm_app", user_id="user-123", session_id=session_id)
+    await session_service.create_session(app_name="litellm_app", user_id="user-123", session_id=session_id)
 
     runner = Runner(
         agent=litellm_agent,
